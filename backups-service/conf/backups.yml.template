@@ -1,0 +1,75 @@
+node:
+  name: localhost
+  url: https://localhost:8443
+
+local:
+  storage:
+    root: /tmp/backups
+  retention:
+    minDuration: 0h
+    minCount: 1
+    daily: 0
+    weekly: 0
+    monthly: 0
+    yearly: 0
+
+offsite:
+  storage:
+    name: CHANGEME
+    key: CHANGEME
+  uploaderThreadPoolSize: 10
+  retention:
+    minDuration: 1d
+    minCount: 1
+    daily: 7
+    weekly: 4
+    monthly: 6
+    yearly: 0
+
+encryption:
+  secret: CHANGEME
+  salt: CHANGEME
+  iterations: 10000
+  length: 128
+
+compression:
+  codec: SNAPPY
+
+backupRequiredFrequency: 25h
+verificationRequiredFrequency: 8d
+
+token:
+  temporaryTokenValidity: 1h
+  encryption:
+    secret: CHANGEME
+    salt: CHANGEME
+    iterations: 1000
+    length: 128
+
+ldap:
+  uri: ldaps://ldap.example.org:636
+  cachePolicy: maximumSize=10000, expireAfterAccess=10m
+  userFilter: ou=people,dc=example,dc=org
+  groupFilter: ou=groups,dc=example,dc=org
+  groupMembershipAttribute: memberUid
+  connectTimeout: 2000ms
+  readTimeout: 5000ms
+
+server:
+  applicationConnectors:
+    - type: https
+      port: 8443
+      keyStorePath: conf/backups.jks
+      keyStorePassword: example
+      keyManagerPassword: example
+      validateCerts: false
+  adminConnectors:
+    - type: http
+      port: 8081
+
+logging:
+  level: INFO
+
+  loggers:
+    "com.yammer.backups": TRACE
+    "com.yammer.azure.locks": WARN

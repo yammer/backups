@@ -1,0 +1,167 @@
+/*
+ * #%L
+ * Backups
+ * %%
+ * Copyright (C) 2013 - 2014 Microsoft Corporation
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+body {
+  padding-top: 80px;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.table-condensed {
+  font-size: 0.9em;
+}
+
+h1 .i-backup-status {
+  font-size: 0.6em;
+}
+
+h1 .i-backup-status:after {
+  top: -16px;
+}
+
+table#b-status-grid tr td:first-child,
+table#b-status-grid tr th:first-child {
+  text-align: left;
+}
+
+table#b-status-grid tr td,
+table#b-status-grid tr th {
+  text-align: center;
+}
+
+.i-backup-status:after {
+  content: "•";
+  display: none;
+  position: absolute;
+  top: -10px;
+  right: -6px;
+}
+
+.i-backup-status.verification-finished:after {
+  color: green;
+  display: inline-block;
+}
+
+.i-backup-status.verification-failed:after {
+  color: red;
+  display: inline-block;
+}
+
+.i-backup-status.verification-timedout:after {
+    color: darkorange;
+    display: inline-block;
+}
+
+.i-backup-status.verification-started:after {
+    color: lightskyblue;
+    display: inline-block;
+}
+
+.b-details {
+  margin: 20px 0 0 0;
+}
+
+.b-detail-param-box {
+  border: 1px solid silver;
+  margin: 0 30px 30px 0;
+  padding: 10px;
+  position: relative;
+}
+
+.i-detail-param-title {
+  display: block;
+  color: #bbb;
+  font-size: 16px;
+  top: 10px;
+  text-align: right;
+}
+
+.i-detail-param-value {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.i-detail-param-link {
+  display: block;
+}
+
+.i-detail-param-link .chevron {
+  float: right;
+}
+
+.i-detail-param-link a {
+  display: block;
+}
+
+.b-info-text {
+  text-transform: uppercase;
+  color: #bbb;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.b-files-group .download-link {
+  float: right;
+}
+
+.b-files-group {
+  position: relative;
+}
+
+.b-files-group .panel-collapse-control {
+  color: rgb(221, 221, 221);
+  position: absolute;
+  top: 5px;
+  left: -45px;
+  font-size: 1.5em;
+}
+
+.b-files-group .panel-collapse-control span {
+  cursor: pointer;
+  width: 0.6em;
+}
+
+.b-files-group .panel-collapse-control span:hover {
+  color: rgb(201, 201, 201);
+}
+
+.panel-group .panel {
+  margin-bottom: 10px;
+}
+
+.i-chunk-stored {
+  display: inline-block;
+  width: 10em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.spinner-container {
+  text-align: center;
+  margin-top: 20%;
+  width: 100%;
+}

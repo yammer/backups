@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>backups-parent</artifactId>
+        <groupId>com.yammer.backups</groupId>
+        <version>0.0.40-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>backups-storage-file</artifactId>
+
+    <dependencies>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-jackson</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-logging</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-metrics</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9500 (Apache 2.0 license) -->
+            <groupId>com.microsoft.windowsazure</groupId>
+            <artifactId>microsoft-windowsazure-api</artifactId>
+            <version>${azure.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>stax</groupId>
+                    <artifactId>stax-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!-- OSS 9491 (Apache 2.0 license) -->
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+    </dependencies>
+</project>

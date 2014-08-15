@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - oraclejdk7
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - secure: "rZpWjiYarn43H4M9TuhAufh5IkCQcOk1OQboWZaXndyOKuHzVHElQaDvK2c+YQ/84iQgSZVz7efx3SuZrcyrvouzHPZ/c1Dz66eZMtM6xybbN6SRRgvDRactxF9jHgPshYtGZhUe4FhWWKePXNJsfZ8jLFG7WuRfQPMw9HC4wc4="
+    - secure: "W6T1pjOPczhuICafGNAHQ9WeEcyqbaNSp8PqYvKyEVHHybkg3Qxfk82Wy5GMggrTFEy7NcEsIGKgAM5YnKYHPc/VoUDRlIRiG6HuzIT80d9jFiD6qq+NyvPQ3XF8RHAekKp0xuph2TUq7T4yK0hPrvWR/OaN0XXTl3K3YOI5GbQ="
+
+after_success:
+  - mvn deploy --settings settings.xml

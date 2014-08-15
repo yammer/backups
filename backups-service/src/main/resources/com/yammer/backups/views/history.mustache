@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>backup :history</title>
+{{> _css}}
+  </head>
+  <body>
+
+{{> _header}}
+
+    <div class="spinner-container">
+        <div class="spinner"><div>Loading...</div></div>
+    </div>
+
+    <div class="container" id="b-history-container"></div>
+
+<!-- at the end -->
+{{> _js}}
+
+    <script>
+
+      var b = new B.Collection.Backups(), v = new B.Collection.Verifications();
+
+      var hp = new B.View.HistoryView({
+          model: b,
+          verifications: v,
+          el: $("#b-history-container")
+      });
+
+      $(function() {
+          b.fetch();
+          v.listenTo(b, "b:indexed", function() {
+            $(".spinner-container").hide();
+            v.fetch();
+          });
+      });
+
+    </script>
+  </body>
+</html>

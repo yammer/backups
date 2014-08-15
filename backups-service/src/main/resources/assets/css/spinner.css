@@ -1,0 +1,121 @@
+/*
+ * #%L
+ * Backups
+ * %%
+ * Copyright (C) 2013 - 2014 Microsoft Corporation
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+@keyframes spin {
+	to {
+	  transform: rotate(1turn);
+	  -ms-transform: rotate(1turn);
+	}
+}
+
+@-webkit-keyframes spin {
+	to {
+	  -webkit-transform: rotate(1turn);
+	}
+}
+
+@-moz-keyframes spin {
+	to {
+	  -moz-transform: rotate(1turn);
+	}
+}
+
+@-o-keyframes spin {
+	to {
+	  -o-transform: rotate(1turn);
+	}
+}
+
+.spinner {
+	position: relative;
+	display: inline-block;
+	width: 5em;
+	height: 5em;
+	margin: 0 .5em;
+	font-size: 12px;
+	text-indent: 999em;
+	overflow: hidden;
+	animation: spin 1s infinite steps(8);
+	-webkit-animation: spin 1s infinite steps(8);
+	-moz-animation: spin 1s infinite steps(8);
+	-o-animation: spin 1s infinite steps(8);
+}
+
+.small.spinner {
+	font-size: 6px;
+}
+
+.large.spinner {
+	font-size: 24px;
+}
+
+.spinner:before,
+.spinner:after,
+.spinner > div:before,
+.spinner > div:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 2.25em;
+	width: .5em;
+	height: 1.5em;
+	border-radius: .2em;
+	background: #eee;
+	box-shadow: 0 3.5em #eee;
+	/*
+	-webkit-box-shadow: 0 3.5em #eee;
+	-moz-box-shadow: 0 3.5em #eee;
+	*/
+	transform-origin: 50% 2.5em;
+	-webkit-transform-origin: 50% 2.5em;
+	-moz-transform-origin: 50% 2.5em;
+	-ms-transform-origin: 50% 2.5em;
+	-o-transform-origin: 50% 2.5em;
+}
+
+.spinner:before {
+	background: #555;
+}
+
+.spinner:after {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	background: #777;
+}
+
+.spinner > div:before {
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	background: #999;
+}
+
+.spinner > div:after {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	background: #bbb;
+}

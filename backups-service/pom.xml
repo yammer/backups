@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>backups-parent</artifactId>
+        <groupId>com.yammer.backups</groupId>
+        <version>0.0.40-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>backups-service</artifactId>
+
+    <dependencies>
+        <dependency>
+            <!-- Internal module -->
+            <groupId>com.yammer.backups</groupId>
+            <artifactId>backups-api</artifactId>
+            <version>0.0.40-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <!-- Internal module -->
+            <groupId>com.yammer.backups</groupId>
+            <artifactId>backups-storage-file</artifactId>
+            <version>0.0.40-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sun.jersey</groupId>
+                    <artifactId>jersey-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jersey</groupId>
+                    <artifactId>jersey-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!-- Internal module -->
+            <groupId>com.yammer.backups</groupId>
+            <artifactId>backups-io-codec</artifactId>
+            <version>0.0.40-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-client</artifactId>
+            <version>${dropwizard.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-codec</groupId>
+                    <artifactId>commons-codec</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-testing</artifactId>
+            <version>${dropwizard.version}</version>
+            <scope>test</scope>
+        </dependency>
+    	<dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+			<groupId>io.dropwizard</groupId>
+			<artifactId>dropwizard-auth</artifactId>
+			<version>${dropwizard.version}</version>
+		</dependency>
+        <dependency>
+            <!-- OSS 9491 (Apache 2.0 license) -->
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9492 (Apache 2.0 license) -->
+            <groupId>com.yammer.collections.azure</groupId>
+            <artifactId>azure-table-util</artifactId>
+            <version>${azure-table.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-databind</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                    <artifactId>jackson-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.microsoft.windowsazure</groupId>
+                    <artifactId>microsoft-windowsazure-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.codahale.metrics</groupId>
+                    <artifactId>metrics-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-views-mustache</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9504 (Apache 2.0 license) -->
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-assets</artifactId>
+            <version>${dropwizard.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9493 (Apache 2.0 license) -->
+            <groupId>com.yammer.dropwizard</groupId>
+            <artifactId>dropwizard-auth-ldap</artifactId>
+            <version>${dropwizard-auth-ldap.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9497 (MIT license) -->
+            <groupId>org.webjars</groupId>
+            <artifactId>backbonejs</artifactId>
+            <version>${backbone.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9498 (MIT license) -->
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${bootstrap.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.webjars</groupId>
+                    <artifactId>jquery</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <!-- OSS 9499 (MIT license) -->
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>${jquery.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9501 (MIT license) -->
+            <groupId>org.webjars</groupId>
+            <artifactId>momentjs</artifactId>
+            <version>${moment.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9502 (MIT license) -->
+            <groupId>org.webjars</groupId>
+            <artifactId>mustachejs</artifactId>
+            <version>${mustache.version}</version>
+        </dependency>
+        <dependency>
+            <!-- OSS 9503 (MIT license) -->
+            <groupId>org.webjars</groupId>
+            <artifactId>underscorejs</artifactId>
+            <version>${underscore.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <createDependencyReducedPom>true</createDependencyReducedPom>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.yammer.backups.BackupService</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

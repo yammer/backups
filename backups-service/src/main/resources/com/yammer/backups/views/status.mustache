@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>backup :status</title>
+{{> _css}}
+  </head>
+  <body>
+
+{{> _header}}
+
+    <div class="spinner-container">
+      <div class="spinner"><div>Loading...</div></div>
+    </div>
+
+    <div class="container" id="b-status-container">
+      <table class="table" id="b-status-grid"></table>
+    </div>
+
+    <div>
+
+    </div>
+
+<!-- at the end -->
+{{> _js}}
+
+    <script>
+
+      var b = new B.Collection.Backups(), v = new B.Collection.Verifications(), s = new B.Collection.Services();
+      var sg = new B.View.StatusGrid({
+          model: b,
+          verifications: v,
+          services: s,
+          el: $("#b-status-grid")
+      });
+
+      $(function() {
+          b.fetch();
+          s.fetch();
+          v.listenTo(b, "b:indexed", function() {
+            $(".spinner-container").hide();
+            v.fetch();
+          });
+      });
+
+    </script>
+  </body>
+</html>
