@@ -33,6 +33,11 @@ For documentation, check out [the wiki](https://github.com/yammer/backups/wiki).
 3. Run the service: `java -jar backups-service/target/backups-service-<version>.jar server <configuration file path>``
 4. The UI and API will be available over HTTPS on port 8443 (or as defined in the configuration file).
 
+## Next Steps
+
+* Set up client scripts to perform data export. Usually these will be configured to run using a crontab. An example can be found in the [`clients/example`](https://github.com/yammer/backups/tree/master/clients/example) directory.
+* Set up alerting for backup failures. Alerting is handled using Dropwizard health checks, which are exposed on the configured admin connector (by default, via HTTP on port 8081).
+
 ## Contributors
 
 * [Jamie Furness](https://github.com/reines)
