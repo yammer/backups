@@ -5,7 +5,7 @@
     <parent>
         <artifactId>backups-parent</artifactId>
         <groupId>com.yammer.backups</groupId>
-        <version>0.0.40-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>backups-service</artifactId>
@@ -15,13 +15,13 @@
             <!-- Internal module -->
             <groupId>com.yammer.backups</groupId>
             <artifactId>backups-api</artifactId>
-            <version>0.0.40-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <!-- Internal module -->
             <groupId>com.yammer.backups</groupId>
             <artifactId>backups-storage-file</artifactId>
-            <version>0.0.40-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.sun.jersey</groupId>
@@ -41,7 +41,7 @@
             <!-- Internal module -->
             <groupId>com.yammer.backups</groupId>
             <artifactId>backups-io-codec</artifactId>
-            <version>0.0.40-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <!-- OSS 9504 (Apache 2.0 license) -->

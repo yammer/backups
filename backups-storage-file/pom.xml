@@ -5,7 +5,7 @@
     <parent>
         <artifactId>backups-parent</artifactId>
         <groupId>com.yammer.backups</groupId>
-        <version>0.0.40-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>backups-storage-file</artifactId>

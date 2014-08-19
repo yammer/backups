@@ -4,3 +4,4 @@ target/
 dependency-reduced-pom.xml
 backups-service/config.yml
 *.log
+*.versionsBackup
