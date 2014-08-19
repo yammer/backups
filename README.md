@@ -28,8 +28,10 @@ For documentation, check out [the wiki](https://github.com/yammer/backups/wiki).
 
 ## Getting Started
 
-* TODO: Sample configuration
-* TODO: Running
+1. Copy and fill in the sample configuration file, found at `backups-service/conf/backups.yml.template`. Documentation on the Backups specific configuration options can be found in [the wiki](https://github.com/yammer/backups/wiki/Configuration), and the inherited Dropwizard configuration options at [dropwizard.io](http://dropwizard.io/manual/configuration.html).
+2. Build the project: `mvn clean package`
+3. Run the service: `java -jar backups-service/target/backups-service-<version>.jar server <configuration file path>``
+4. The UI and API will be available over HTTPS on port 8443 (or as defined in the configuration file).
 
 ## Contributors
 
