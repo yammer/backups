@@ -14,12 +14,12 @@ For documentation, check out [the wiki](https://github.com/yammer/backups/wiki).
 
 ## Contributors
 
-* Jamie Furness (@reines)
-* Matias Surdi (@msurdi)
-* Matt Knopp (@mhat)
-* Maxim Kazantsev (@mkazantsev)
-* Ryan Kennedy (@ryankennedy)
-* Will Whitaker (@willwhitaker)
+* [Jamie Furness](https://github.com/reines)
+* [Matias Surdi](https://github.com/msurdi)
+* [Matt Knopp](https://github.com/mhat)
+* [Maxim Kazantsev](https://github.com/mkazantsev)
+* [Ryan Kennedy](https://github.com/ryankennedy)
+* [Will Whitaker](https://github.com/willwhitaker)
 
 ## License
 
