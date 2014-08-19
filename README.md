@@ -20,6 +20,17 @@ Additionally, the backups service provides easy auditing, monitoring, retention 
 
 For documentation, check out [the wiki](https://github.com/yammer/backups/wiki).
 
+## Runtime Dependencies
+
+* [Azure Table Storage](http://azure.microsoft.com/en-us/documentation/articles/storage-introduction/) for metadata storage.
+* [Azure Blob Storage](http://azure.microsoft.com/en-us/documentation/articles/storage-introduction/) for offsite backup storage.
+* An LDAP Server for user authentication.
+
+## Getting Started
+
+* TODO: Sample configuration
+* TODO: Running
+
 ## Contributors
 
 * [Jamie Furness](https://github.com/reines)
