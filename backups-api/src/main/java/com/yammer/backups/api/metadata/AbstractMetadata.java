@@ -97,7 +97,7 @@ public abstract class AbstractMetadata<T> implements Storable {
 
     @VisibleForTesting
     public synchronized void setState(T update, String comment) {
-        LOG.debug("Changing state {} -> {} for {} because: {}", state, update, this, comment);
+        LOG.trace("Changing state {} -> {} for {} because: {}", state, update, this, comment);
 
         transitions.add(new Transition<>(state, update, comment));
         state = update;

@@ -94,7 +94,7 @@ public class RetentionPolicyProcessor extends AbstractScheduledProcessor {
         for (BackupMetadata backup : extras) {
             try {
                 backupProcessor.deleteFromFileStorage(fileStorage, location, backup);
-                LOG.info("Deleted unretained backup from {}: {}", fileStorage, backup);
+                LOG.trace("Deleted unretained backup from {}: {}", fileStorage, backup);
             }
             catch (IOException e) {
                 LOG.warn("Failed to delete extra backup from " + fileStorage, e);
