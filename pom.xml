@@ -9,6 +9,7 @@
 
     <name>Backups</name>
     <description>A friendly backup service, providing compression, encryption, offsite storage, and retention policy handling.</description>
+    <url>https://github.com/yammer/backups</url>
 
     <licenses>
         <license>
